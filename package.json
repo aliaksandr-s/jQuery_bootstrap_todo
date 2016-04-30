@@ -1,0 +1,23 @@
+{
+  "name": "jquery_bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliaksandr-s/jQuery_bootstrap_todo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aliaksandr-s/jQuery_bootstrap_todo/issues"
+  },
+  "homepage": "https://github.com/aliaksandr-s/jQuery_bootstrap_todo#readme",
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "gulp": "^3.9.1"
+  }
+}

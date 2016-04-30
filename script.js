@@ -1,10 +1,9 @@
 $(function () {
+    getNotes();
 
     $('#add').click(addNote);
     $('.marketing').on('click', removeNote);
     $('input[type="text"').on('keypress', handeInput);
-
-    getNotes();
 
     function getNotes() {
         var notes = window.localStorage.getItem('notesCopy');
