@@ -7,7 +7,7 @@ $(function () {
     getNotes();
 
     function getNotes() {
-        var notes = localStorage.getItem('notesCopy');
+        var notes = window.localStorage.getItem('notesCopy');
         if (notes) {
             var parsed = jQuery.parseJSON(notes);
             $('div.all-notes').replaceWith(parsed);
@@ -31,7 +31,7 @@ $(function () {
     function copyNotes() {
         var notesCopy = $('div.all-notes').prop('outerHTML');
         var jsonString = JSON.stringify(notesCopy);
-        localStorage.setItem('notesCopy', jsonString);
+        window.localStorage.setItem('notesCopy', jsonString);
     }
 
     function removeNote() {
