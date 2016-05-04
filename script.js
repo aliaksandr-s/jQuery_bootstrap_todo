@@ -17,21 +17,24 @@ $(function () {
         if (e.keyCode === 13){
             addNote();
         }
-    }
+    };
 
     function addNote() {
         var text = $('input[type="text"]').val();
-        $('input[type="text"]').val(" ");
+        if (!text) {
+            return false;
+        }
+        $('input[type="text"]').val("");
         var insertPlace = $('div.marketing').children();
         insertPlace.prepend('<div class="note-wrapper"><p class="note">' + text + '</p><span class="glyphicon glyphicon-remove icon"></span></div>');
         copyNotes();
-    }
+    };
 
     function copyNotes() {
         var notesCopy = $('div.all-notes').prop('outerHTML');
         var jsonString = JSON.stringify(notesCopy);
         window.localStorage.setItem('notesCopy', jsonString);
-    }
+    };
 
     function removeNote() {
         if ($(event.target).hasClass('icon')) {
@@ -41,6 +44,6 @@ $(function () {
                 copyNotes();
             });
         }
-    }
+    };
 
 })
